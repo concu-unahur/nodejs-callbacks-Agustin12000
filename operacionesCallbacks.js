@@ -1,34 +1,36 @@
-function cambia(x, unaFuncion) {
+const change = (x, next) => {
     z = x + 1
-    y = unaFuncion(z)
+    y = next(z)
     return y
 }
     
 
-function porDiez(x) {
+const forTen = (x) => {
     y = x*10
     return y
 }
 
 
-function porCinco(x) {
+const forFive = (x) => {
     y = x*5
     return y
 }
 
 
-valor = 2 //no se puede modificar
+value = 2 //no se puede modificar
 
 
 // que el valor de res1 sea 15
-var res1 = //cambia(...completar)
+var res1 = change(value, forFive)
 console.log(res1)
 
 
 // que el valor de res2 sea 30
-var res2 = //cambia(...completar)
+var res2 = change(value, forTen)
 console.log(res2)
 
 
-var res3 = cambia(cambia(valor,porCinco),porDiez)
+var res3 = change(change(value,forFive),forTen)
 // ¿Cuánto vale res3 acá? No vale hacer console.log ni nada por el estilo.
+
+console.log(res3)
